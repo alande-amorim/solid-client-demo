@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Getting Started: Inrupt JavaScript Client Libraries</title>
+    <script defer src="./index.js" ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <header>
+        <h2>Getting Started</h2>
+        <h3>with Inrupt JavaScript Client Libraries</h3>
+    </header>
+    <section id="login" class="panel">
+        <div class="row">
+          <label id="labelLogin" for="btnLogin">1. Click the button to log in: </label>
+          <select name="" id="oidIssuer">
+              <option>Select Issuer</option>
+              <option value="https://solidcommunity.net/">Solid Community</option>
+              <option value="https://inrupt.net">Inrupt.net</option>
+              <option value="https://broker.pod.inrupt.com">Pod.inrupt.com</option>
+          </select>
+          <button name="btnLogin" id="btnLogin">Login</button> 
+          <p id="labelStatus"></p>
+        </div>
+    </section>
+
+    <div id="read" class="panel" >
+      <div class="row">
+        <label id="readlabel" for="webID">2. Enter a WebID: </label>
+        <input type="url" id="webID" name="webID"  size="50" pattern="https://.*"  value="https://pod.inrupt.com/<username>/profile/card#me">
+        <button name="btnRead" id="btnRead" >Read Profile</button>
+      </div>
+      <dl class="display"> 
+          <dt>Formatted Name (FN): </dt>
+          <dd id="labelFN"></dd>
+          <dt>Role: </dt>
+          <dd id="labelRole"></dd>
+      </dl>
+    </div>
+
+    <div id="read-file" class="panel" >
+        <h3>Read File</h3>
+        <div class="row">
+            <input type="url" id="fileUrl" name="fileUrl"  size="50" pattern="https://.*"  value="https://docs-example.inrupt.net/profile/card#me">
+            <button name="btnReadFile" id="btnReadFile" >Read File</button>
+        </div>
+        <textarea id="filecontents" rows="10"></textarea>
+    </div>
+
+    <div id="write-file" class="panel" >
+        <h3>Write File</h3>
+        <textarea id="write-contents" rows="10"></textarea>
+        <input type="url" id="writeFileUrl" name="writeFileUrl"  size="50" pattern="https://.*"  value="https://pod.inrupt.com/<username>/public/test.txt">
+        <button name="btnWriteFile" id="btnWriteFile" >Write File</button>
+    </div>
+  </body>
+</html>
