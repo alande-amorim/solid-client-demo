@@ -3,8 +3,8 @@ module.exports = {
    mode: "development",
    entry: "./src/index.js",
    output: {
-     path: path.resolve(__dirname, "public"), 
-     filename: "index.js" 
+     path: path.resolve(__dirname, "dist"), 
+     filename: "dist/index.js" 
    },
   module: {
     rules: [
@@ -15,7 +15,7 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: "./dist"
+    contentBase: "./public/"
   },
   resolve: {
       fallback: { 
